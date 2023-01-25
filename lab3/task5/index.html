@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="passwd">Enter your password</label>
+            <input type="password" name="passwd">
+        </div>
+        <fieldset>
+            <legend>Contact details</legend>
+                <table align="center">
+                    <tr>
+                        <td>
+                            <label for="name">Name</label>
+                            <input type="text" name="name">            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  align="center">
+                            <label for="age">Age</label>
+                            <select name="age" id="age">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gender">Gender</label>
+                            <input type="radio" name="gender" id="male">                        
+                            <label for="male" name="gender">Male</label>
+                            <input type="radio" name="gender" id="female">
+                            <label for="female" name="gender">Female</label>
+                            <input type="radio" name="gender" id="non-binary">
+                            <label for="non-binary" name="gender">Non-binary</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <label for="hobbies">Hobbies</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  align="center">
+                            <input type="checkbox" name="hobbies" id="tech">
+                            <label for="tech">Tech</label>
+                            <input type="checkbox" name="hobbies" id="sport">
+                            <label for="sport">Sport</label>
+                            <input type="checkbox" name="hobbies" id="art">
+                            <label for="art">Art</label>
+                            <input type="checkbox" name="hobbies" id="science">
+                            <label for="science">Science</label>
+                        </td>
+                    </tr>
+                </table>
+        </fieldset>
+        <fieldset>
+            <legend>Feedback</legend>
+            <table align="center">
+                <tr>
+                    <td align="center" colspan="2">File</td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <input type="text">
+                    </td>
+                    <td>
+                        <input type="file" name="" id="feedback">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">Textarea</td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <textarea name="" id="feedback" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <input type="submit" value="Submit">
+                        <input type="reset">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
