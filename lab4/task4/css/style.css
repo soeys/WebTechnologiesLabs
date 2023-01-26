@@ -1,0 +1,40 @@
+.box {
+    height: 100px;
+    width: 80px;
+    position: relative;
+}
+
+.box#box1 {
+    background-color: blue;
+    left: 600px;
+    top: 300px;
+    z-index: 1;
+}
+
+.box#box2 {
+    background-color: red;
+    left: 660px;
+    top: 110px;
+    z-index: 0;
+}
+
+.box#box3 {
+    background-color: green;
+    left: 900px;
+    top: 100px;
+    z-index: 0;
+}
+
+.box#box4 {
+    background-color: purple;
+    left: 850px;
+    bottom: 90px;
+    z-index: 1;
+}
+
+.box#box5 {
+    background-color: yellow;
+    left: 900px;
+    bottom: 250px;
+    z-index: 2;
+}
