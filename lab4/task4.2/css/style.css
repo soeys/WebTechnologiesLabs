@@ -35,4 +35,6 @@ footer{
     width: 1280px;
     height: 100px;
     bottom: 520px;
+    text-align: center;
+    font-size: 72px;
 }

@@ -1,0 +1,27 @@
+fieldset {
+    text-align: center;
+    padding: 20px;
+    line-height: 40px;
+    background-color: lightcoral;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-color: lightblue;
+}
+
+.buttons {
+    position: relative;
+    text-align: center;
+    background-color: lightcoral;
+    color: lightblue;
+    width: 200px;
+    font-size: large;
+    border-radius: 100%;
+    border: 1px black;
+    box-shadow: 10px 10px 5px lightblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+.text-field{
+    color: lightcoral;
+    box-shadow: 10px 10px 5px lightblue;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 Task 6</title>
+    <style>
+        ul{
+            list-style-type: none;
+            float: left;
+        }
+        .content{
+            float: right;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid black;
+            overflow: hidden;
+            z-index: 0;
+
+            margin-bottom: -100px;
+        }
+
+        #page1:checked~#box1{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <input type="radio" name="selector" id="page1">
+            <label for="page1">Page 1</label>
+        </li>
+        <li>
+            <input type="radio" name="selector" id="page2">
+            <label for="page2">Page 2</label>
+        </li>
+        <li>
+            <input type="radio" name="selector" id="page3">
+            <label for="page3">Page 3</label>
+        </li>
+        <li>
+            <input type="radio" name="selector" id="page4">
+            <label for="page4">Page 4</label>
+        </li>
+        <li>
+            <input type="radio" name="selector" id="page5">
+            <label for="page5">Page 5</label>
+        </li>
+        <li>
+            <input type="radio" name="selector" id="page6">
+            <label for="page6">Page 6</label>
+        </li>
+    </ul>
+    <div class="content">
+        <div class="box" id="box1">
+            Page 1
+            <br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque at enim praesentium impedit necessitatibus, provident doloremque. Hic ex velit laudantium voluptatum, accusantium consequatur culpa nemo molestiae non, atque iste nam?
+        </div>
+        <!-- <div class="box"id="box2">
+            Page 2 
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores vel possimus culpa consequatur. Optio maiores, reiciendis possimus aliquid consequuntur veritatis in hic magni dolorem esse, deserunt, dignissimos et aperiam suscipit!
+        </div>
+        <div class="box" id="box3">
+            Page 3 
+            <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae a iure, placeat maxime aut provident? Odio labore beatae esse, blanditiis provident recusandae earum quaerat veritatis, quos commodi itaque totam aperiam.
+        </div>
+        <div class="box" id="box4">
+            Page 4
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iusto quo optio odit impedit magni numquam eius laboriosam rerum alias placeat, animi itaque facere blanditiis similique dolor quasi modi corporis?
+        </div>
+        <div class="box" id="box5">
+            Page 5
+            <br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nihil, praesentium aliquam voluptate ab excepturi facere. Ea laborum dolore rem architecto porro, earum, unde voluptates perferendis sequi tenetur ad exercitationem?
+        </div>
+        <div class="box" id="box6">
+            Page 6
+            <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur odit quis ipsum commodi enim obcaecati nam doloremque aut. Reiciendis aliquam fugiat possimus iste velit itaque quam nostrum facere natus a.
+        </div> -->
+    </div>
+</body>
+
+</html>

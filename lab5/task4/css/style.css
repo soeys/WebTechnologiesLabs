@@ -1,0 +1,55 @@
+body {
+    background-color: #005377;
+}
+
+#passw{
+    color: white; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+fieldset {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #007758;
+    border-color: #18b2a8;
+    color: white;
+    padding: 20px;
+    line-height: 40px;
+}
+
+.text-field {
+    color: #97e191;
+    box-shadow: 5px 5px 5px #0a9800;
+}
+
+.buttons {
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    text-align: center;
+    font-size: large;
+    width: 200px;
+    border-radius: 100%;
+    border: 1px black;
+    background-color: #5ebc57;
+    color: white;
+    box-shadow: 5px 5px 5px #0a9800;
+}
+
+.text-field:focus {
+    background-color: #97e191;
+    color: white;
+    box-shadow: 10px 10px 5px #0a9800;
+}
+
+.buttons:hover {
+    background-color: white;
+    color: #0a9800;
+    box-shadow: 10px 10px 5px #5ebc57;
+}
+
+input[type=password]:focus {
+    background-color: #97e191;
+    color: white;
+    box-shadow: 5px 5px 5px #0a9800;
+}
