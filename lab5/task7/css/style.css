@@ -4,41 +4,73 @@
     position: relative;
 }
 
-.box#box1 {
+#box1 {
     background-color: blue;
-    left: 600px;
+    left: 500px;
     top: 300px;
     z-index: 1;
+
+    visibility: collapse;
 }
 
-.box#box2 {
+#box2 {
     background-color: red;
-    left: 660px;
+    left: 560px;
     top: 110px;
     z-index: 0;
-    color: black; text-align: center;
+    color: black;
+    text-align: center;
+
+    visibility: collapse;
 }
 
-.box#box3 {
+#box3 {
     background-color: green;
-    left: 900px;
+    left: 800px;
     top: 100px;
     z-index: 0;
-    color: red; text-align: end;
+    color: red;
+    text-align: end;
+
+    visibility: collapse;
 }
 
-.box#box4 {
+#box4 {
     background-color: purple;
-    left: 850px;
+    left: 750px;
     bottom: 90px;
     z-index: 1;
     color: aqua;
+
+    visibility: collapse;
 }
 
-.box#box5 {
+#box5 {
     background-color: yellow;
-    left: 900px;
+    left: 800px;
     bottom: 250px;
     z-index: 2;
     color: blue;
+
+    visibility: collapse;
+}
+
+#box1-visibility:checked~ #box1 {
+    visibility: visible;
+}
+
+#box2-visibility:checked~ #box2 {
+    visibility: visible;
+}
+
+#box3-visibility:checked~ #box3 {
+    visibility: visible;
+}
+
+#box4-visibility:checked~ #box4 {
+    visibility: visible;
+}
+
+#box5-visibility:checked~ #box5 {
+    visibility: visible;
 }
