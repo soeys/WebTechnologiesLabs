@@ -1,0 +1,30 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 1fr 9fr;
+}
+
+.box {
+    background-color: gray;
+    background-color: #E8E2E2;
+
+    padding: 1em;
+}
+
+nav {
+    grid-area: 1 / 1 / span 2 / span 1;
+
+    background-color: #5D3891;
+    color: white;
+}
+
+header {
+    background-color: #F99417;
+    text-align: center;
+}
+
+footer {
+    grid-area: 3 / 1 / span 1 / span 2;
+    text-align: center;
+    background-color: #F5F5F5;
+}
