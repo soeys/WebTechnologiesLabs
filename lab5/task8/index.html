@@ -2,10 +2,10 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Lab 5 Task 8</title>
     <link rel="stylesheet" media="all" type="text/css" href="dropdown.css">
-
     <style>
+        /* Директива, що задає властивості блоку, містящиму меню */
         .menu {
             font-family: arial, sans-serif;
             width: 750px;
@@ -15,6 +15,7 @@
             z-index: 100;
         }
 
+        /* Стилизація списку елементів першого рівня, як для загального стану так і для відвіданих гіперпосилань */
         .menu ul li a,
         .menu ul li a:visited {
             display: block;
@@ -31,25 +32,30 @@
             overflow: hidden;
         }
 
+        /* Регуляція відступів у середені блока menu та у між елементами переліку, також прибираємо дефолтні "прикраси" элементів переліку */
         .menu ul {
             padding: 0;
             margin: 0;
             list-style: none;
         }
 
+        /* Ці властивості дозволяє блокам йти у рядок */
         .menu ul li {
             float: left;
             position: relative;
         }
 
+        /* початковий стан випадаючих переліків - зхований */
         .menu ul li ul {
             display: none;
         }
 
+        /* Дозволяє єлементам 1 2 3 та 4 змінювати колір прямокутника та написів у ньому при наведені курсором */
         .menu ul li:hover a {
             color: #fff;
             background: #36f;
         }
+
 
         .menu ul li:hover ul {
             display: block;
@@ -59,31 +65,38 @@
             width: 105px;
         }
 
+
+        /* Стилизація гіперпосилась єлементів другого рівня що містять вкладені переліки таки як 1.4 та 4.4*/
         .menu ul li:hover ul li a.hide {
             background: #6a3;
             color: #fff;
         }
 
+        /* Дозволяє єлементам другого рівня що містять вкладені переліки таки як 1.4 та 4.4 змінювати колір прямокутника та написів у ньому при наведені курсором */
         .menu ul li:hover ul li:hover a.hide {
             background: #6fc;
             color: #000;
         }
 
+        /* початковий стан випадаючих переліків - зхований */
         .menu ul li:hover ul li ul {
             display: none;
         }
 
+        /* Стилизація єлементів третього рівня що містяться у вкладених переліках таких як 1.4 та 4.4*/
         .menu ul li:hover ul li a {
             display: block;
             background: #ddd;
             color: #000;
         }
 
+        /* Дозволяє єлементам  третього рівня змінювати колір прямокутника та написів у ньому при наведені курсором */
         .menu ul li:hover ul li a:hover {
             background: #6fc;
             color: #000;
         }
 
+        /* відображення списку єлементів третього рівня, для загального випадку - праворуч */
         .menu ul li:hover ul li:hover ul {
             display: block;
             position: absolute;
@@ -91,6 +104,7 @@
             top: 0;
         }
 
+        /* відображення списку єлементів третього рівня, але на цей раз ліворуч */
         .menu ul li:hover ul li:hover ul.left {
             left: -105px;
         }
@@ -100,30 +114,33 @@
 <body>
     <div class="menu">
         <ul>
-            <li><a href="">1</a>
+            <li>
+                <a href="">1</a>
                 <ul>
                     <li><a href="" title="">1.1</a></li>
                     <li><a href="" title="">1.2</a></li>
-                    <li><a href="" title="">1.3</a></li>
-                    <li><a class="hide" href="" title="">1.4</a>
-                        <ul>
-                            <li><a href="" title="">1.4.1</a></li>
-                            <li><a href="" title="">1.4.2</a></li>
-                            <li><a href="" title="">1.4.3</a></li>
-                    </li>
+                    <li><a href="" title="">1.3</a><ul></li>
                 </ul>
-            <li><a href="" title="">1.5</a></li>
-            <li><a href="" title="">1.6</a></li>
-            <li><a href="" title="">1.7</a></li>
+            </li>
         </ul>
-        </li>
         <li><a href="">2</a>
             <ul>
                 <li><a href="" title="">2.1</a></li>
-                <li><a href="" title="">2.2</a></li>
-                <li><a href="" title="">2.3</a></li>
-                <li><a href="" title="">2.4</a></li>
-                <li><a href="" title="">2.5</a></li>
+                <li><a class="hide" href="" title="">2.2</a>
+                    <ul class="">
+                        <li><a href="" title="">2.2.1</a></li>
+                        <li><a href="" title="">2.2.2</a></li>
+                        <li><a href="" title="">2.2.3</a></li>
+                    </ul>
+                </li>
+                <li><a class="hide" href="" title="">2.3</a>
+                    <ul class="">
+                        <li><a href="" title="">2.3.1</a></li>
+                        <li><a href="" title="">2.3.2</a></li>
+                        <li><a href="" title="">2.3.3</a></li>
+                        <li><a href="" title="">2.3.4</a></li>
+                    </ul>
+                </li>
             </ul>
         </li>
         <li><a href="">3</a>
@@ -132,7 +149,6 @@
                 <li><a href="" title="">3.2</a></li>
                 <li><a href="" title="">3.3</a></li>
                 <li><a href="" title="">3.4</a></li>
-                <li><a href="" title="">3.5</a></li>
             </ul>
         </li>
         <li><a href="">4</a>
@@ -145,8 +161,37 @@
                         <li><a href="" title="">4.4.1</a></li>
                         <li><a href="" title="">4.4.2</a></li>
                         <li><a href="" title="">4.4.3</a></li>
+                        <li><a href="" title="">4.4.4</a></li>
+                        <li><a href="" title="">4.4.5</a></li>
                     </ul>
                 </li>
+                <li><a class="hide" href="" title="">4.5</a>
+                    <ul class="left">
+                        <li><a href="" title="">4.5.1</a></li>
+                        <li><a href="" title="">4.5.2</a></li>
+                        <li><a href="" title="">4.5.3</a></li>
+                        <li><a href="" title="">4.5.4</a></li>
+                        <li><a href="" title="">4.5.5</a></li>
+                        <li><a href="" title="">4.5.6</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">5</a>
+            <ul>
+                <li><a href="" title="">5.1</a></li>
+                <li><a href="" title="">5.2</a></li>
+                <li><a href="" title="">5.3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">6</a>
+            <ul>
+                <li><a href="" title="">6.1</a></li>
+                <li><a href="" title="">6.2</a></li>
+                <li><a href="" title="">6.3</a></li>
+                <li><a href="" title="">6.4</a></li>
             </ul>
         </li>
         </ul>
