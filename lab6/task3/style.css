@@ -1,0 +1,15 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+.gray-blocks{
+    background-color: gray;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1em;
+}
