@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 Task 3</title>
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <label for="a">Велика піввісь еліпса</label>
+        <input type="number" name="a" id="a" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+        <label for="b">Мала піввісь еліпса</label>
+        <input type="number" name="b" id="b" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+        <label for="n">Кількість цифр після коми</label>
+        <input type="number" name="n" id="n" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+    </main>
+
+    <input type="radio" name="user-option" id="square" value="square">
+    <label for="square">Площу</label>
+    <input type="radio" name="user-option" id="length" value="length">
+    <label for="length">Довжину</label>
+
+    <input type="button" value="Порахувати" id="submit">
+
+    <div id="result">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

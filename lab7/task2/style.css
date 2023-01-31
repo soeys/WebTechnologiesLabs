@@ -1,0 +1,10 @@
+img{
+    width: 640px;
+    height: 360px;
+}
+
+.photo{
+    position: absolute;
+    top: 50px;
+    z-index: 0;
+}

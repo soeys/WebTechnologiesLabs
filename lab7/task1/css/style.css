@@ -1,0 +1,77 @@
+body {
+    background-color: #ECF9FF;
+}
+
+#passw{
+    color: black; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+fieldset {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFE7CC;
+    border-color: #F8CBA6;
+    color: black;
+    padding: 20px;
+    line-height: 40px;
+}
+
+.text-field {
+    color: black;
+    box-shadow: 5px 5px 5px #F8CBA6;
+}
+
+.buttons {
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    text-align: center;
+    font-size: large;
+    width: 110px;
+    border-radius: 100%;
+    border: 1px black;
+    background-color: #FFE7CC;
+    box-shadow: 5px 5px 5px #F8CBA6;
+}
+
+.text-field:focus {
+    background-color: #FFFBEB;
+    box-shadow: 10px 10px 5px #F8CBA6;
+}
+
+.buttons:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 10px 10px 5px #F8CBA6;
+}
+
+input[type=password]:focus {
+    background-color: #FFFBEB;
+    box-shadow: 5px 5px 5px #F8CBA6;
+}
+
+#summary{
+    height: 300px;
+    width: 300px;
+    background-color: #FFE7CC;
+    border: 1px solid #F8CBA6;
+
+    position: absolute;
+
+    display: table-cell;
+
+    text-align: center;
+    
+
+    left: 600px;
+    top: 200px;
+    opacity: 0.9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    visibility: collapse;
+}
+
+#summary #close-button{
+    text-align: bottom;
+}

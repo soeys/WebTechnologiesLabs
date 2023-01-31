@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Lab 5 Task 5</title>
+    <title>Lab 7 Task 1</title>
 </head>
 
 <body>
+    <div id="summary">
+    </div>
+
     <form action="">
         <label for="passw" id="passw">Password</label>
         <input type="password" id="passw">
@@ -30,23 +33,23 @@
                 </div>
                 <div>
                     <label for="gender">Gender</label>
-                    <input type="radio" name="gender" id="female">
+                    <input type="radio" name="gender" id="female" value="female" checked>
                     <label for="female">Female</label>
-                    <input type="radio" name="gender" id="male">
+                    <input type="radio" name="gender" id="male" value="male">
                     <label for="male">Male</label>
                 </div>
                 <div>Your hobbies</div>
                 <div>
-                    <input type="checkbox" name="hobbies" id="tech">
+                    <input type="checkbox" name="hobbies" id="tech" value="tech">
                     <label for="tech">Tech</label>
 
-                    <input type="checkbox" name="hobbies" id="sport">
+                    <input type="checkbox" name="hobbies" id="sport" value="sport">
                     <label for="sport">Sport</label>
 
-                    <input type="checkbox" name="hobbies" id="art">
+                    <input type="checkbox" name="hobbies" id="art" value="art">
                     <label for="art">Art</label>
 
-                    <input type="checkbox" name="hobbies" id="science">
+                    <input type="checkbox" name="hobbies" id="science" value="science">
                     <label for="science">Science</label>
                 </div>
             </div>
@@ -69,12 +72,13 @@
                 </div>
             </div>
             <div>
-                <input type="submit" value="Submit" class="buttons">
+                <input type="button" value="Submit" class="buttons" id="submit">
                 <input type="reset" value="Reset" class="buttons">
             </div>
         </fieldset>
     </form>
 
+    <script src="js/main.js"></script>
 </body>
 
 </html>
