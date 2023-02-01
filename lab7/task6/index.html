@@ -19,25 +19,16 @@
 </head>
 
 <body>
-
-    <ul>
-        <li>MS-DOS</li>
-        <li>Windows 95</li>
-        <li>Windows 98</li>
-        <li>Windows XP</li>
-        <li>Windows Vista</li>
-        <li>Windows 10</li>
-        <li>Windows 10 Mobile</li>
-        <li>macOS</li>
-        <li>iOS</li>
-        <li>iPadOS</li>
-        <li>watchOS</li>
-        <li>tvOS</li>
-        <li>HarmonyOS</li>
-        <li id="placeholder">
-            <input type="text" name="" id="additonal-os">
-        </li>
-    </ul>
+    <table>
+        <tbody id="data">
+            <th>MS-DOS</th>
+            <th>Windows 10</th>
+            <th>macOS</th>
+            <th>Windows 98</th>
+            <th>HarmonyOS</th>
+            <th><input type="text" name="users-input" id="additonal-os"></th>
+        </tbody>
+    </table>
 
     <div id="buttons">
         <input type="button" value="Add" id="add">
@@ -48,15 +39,12 @@
         document.getElementById('add').addEventListener('click', function () {
             if (document.getElementById('additonal-os').value != "") {
                 let userInput = document.getElementById('additonal-os').value;
-                let list = document.getElementById('placeholder');
+                let list = document.getElementById('data');
                 list.removeChild(list.children[0]);
-                list.innerHTML += userInput;
+                list.appendChild()
+                // list.innerHTML += ;
             }
-        })
 
-        document.getElementById('remove').addEventListener('click', function () {
-            let list = document.getElementsByTagName('ul')[0];
-            list.removeChild(list.children[0]);
         })
     </script>
 </body>

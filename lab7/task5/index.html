@@ -18,7 +18,12 @@
 </head>
 
 <body>
-    <ul>
+
+    <div id="buttons">
+        <input type="button" value="Add" id="add">
+        <input type="button" value="Remove" id="remove">
+    </div>
+    <ul id="os-list">
         <li>MS-DOS</li>
         <li>Windows 95</li>
         <li>Windows 98</li>
@@ -32,23 +37,24 @@
         <li>watchOS</li>
         <li>tvOS</li>
         <li>HarmonyOS</li>
-        <li id="placeholder">
+        <li>
             <input type="text" name="" id="additonal-os">
         </li>
     </ul>
 
-    <div id="buttons">
-        <input type="button" value="Add" id="add">
-        <input type="button" value="Remove" id="remove">
-    </div>
 
     <script>
         document.getElementById('add').addEventListener('click', function () {
-            if (document.getElementById('additonal-os').value != "") {
-                let userInput = document.getElementById('additonal-os').value;
-                let list = document.getElementById('placeholder');
-                list.removeChild(list.children[0]);
-                list.innerHTML += userInput;
+            let userInput = document.getElementById('additonal-os').value;
+
+            if (userInput != "") {
+                document.querySelector('ul#os-list').removeChild(document.querySelector('ul#os-list').children[document.querySelectorAll('ul#os-list li').length - 1]);
+
+                const node = document.createElement("li");
+                const textnode = document.createTextNode(userInput);
+
+                node.appendChild(textnode);
+                document.querySelector('ul#os-list').appendChild(node)
             }
 
         })
