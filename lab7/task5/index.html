@@ -37,31 +37,22 @@
         <li>watchOS</li>
         <li>tvOS</li>
         <li>HarmonyOS</li>
-        <li>
-            <input type="text" name="" id="additonal-os">
-        </li>
+        <li><input type="text" name="" id="additonal-os"></li>
     </ul>
 
 
     <script>
         document.getElementById('add').addEventListener('click', function () {
             let userInput = document.getElementById('additonal-os').value;
-
-            if (userInput != "") {
-                document.querySelector('ul#os-list').removeChild(document.querySelector('ul#os-list').children[document.querySelectorAll('ul#os-list li').length - 1]);
-
-                const node = document.createElement("li");
-                const textnode = document.createTextNode(userInput);
-
-                node.appendChild(textnode);
-                document.querySelector('ul#os-list').appendChild(node)
+            if (userInput) {
+                let li = document.getElementById('additonal-os').parentElement;
+                li.removeChild(li.firstChild);
+                li.appendChild(document.createTextNode(userInput));
             }
-
         })
 
         document.getElementById('remove').addEventListener('click', function () {
-            let list = document.getElementsByTagName('ul')[0];
-            list.removeChild(list.children[0]);
+            document.getElementsByTagName('ul')[0].removeChild(document.getElementsByTagName('ul')[0].children[0]);
         })
     </script>
 </body>

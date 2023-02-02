@@ -10,7 +10,6 @@
     <style>
         #buttons {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             gap: 1em;
             text-align: center;
@@ -19,33 +18,43 @@
 </head>
 
 <body>
-    <table>
-        <tbody id="data">
-            <th>MS-DOS</th>
-            <th>Windows 10</th>
-            <th>macOS</th>
-            <th>Windows 98</th>
-            <th>HarmonyOS</th>
-            <th><input type="text" name="users-input" id="additonal-os"></th>
-        </tbody>
-    </table>
-
     <div id="buttons">
         <input type="button" value="Add" id="add">
         <input type="button" value="Remove" id="remove">
     </div>
 
-    <script>
-        document.getElementById('add').addEventListener('click', function () {
-            if (document.getElementById('additonal-os').value != "") {
-                let userInput = document.getElementById('additonal-os').value;
-                let list = document.getElementById('data');
-                list.removeChild(list.children[0]);
-                list.appendChild()
-                // list.innerHTML += ;
-            }
-
-        })
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Developer</th>
+                <th>Source model</th>
+                <th>Platforms</th>
+                <th>General availability</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Windows 95</td>
+                <td>Microsoft</td>
+                <td>Closed</td>
+                <td>IA-32</td>
+                <td>August 24, 1995</td>
+            </tr>
+            <tr>
+                <td>Windows 95</td>
+                <td>Microsoft</td>
+                <td>Closed</td>
+                <td>IA-32</td>
+                <td>August 24, 1995</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id="additonal-os"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js">
+        
     </script>
 </body>
 
