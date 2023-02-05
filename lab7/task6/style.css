@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    text-align: center;
+}
+
+#additonal-os {
+    width: 100%;
+}

@@ -15,9 +15,9 @@ document.querySelector('#add').addEventListener('click', function () {
             let td = document.createElement('td');
             let data = userInput.slice(0, userInput.search(" "));
             td.appendChild(document.createTextNode(data));
-            userInput = userInput.slice(userInput.search(" ") + 1, userInput.length);
-
             newTR.appendChild(td);
+
+            userInput = userInput.slice(userInput.search(" ") + 1, userInput.length);
         }
 
         newTR.addEventListener('click', function () {
