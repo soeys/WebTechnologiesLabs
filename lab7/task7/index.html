@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 7 Task 7</title>
+    <style>
+        .selected {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,8 +32,8 @@
         <li>iPadOS</li>
         <li>watchOS</li>
         <li>tvOS</li>
-        <li class="new">HarmonyOS</li>
-        <li><input type="text" name="" id="additonal-os"></li>
+        <li>HarmonyOS</li>
+        <li><input type="text" name="" id="text"></li>
     </ul>
 
     <script>
@@ -35,31 +41,29 @@
             return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
         }
 
-        document.getElementById('add').addEventListener('click', function () {
-            let userInput = document.getElementById('additonal-os').value;
+        document.querySelector('#add').addEventListener('click', function () {
+            let userInput = document.getElementById('text').value;
+
             if (userInput) {
+                let osList = document.querySelector('#os-list');
+                let osListELements = osList.children;
+                let textField = osListELements[osListELements.length - 1];
                 let li = document.createElement('li');
-                // li.classList.add("new");
+
                 li.appendChild(document.createTextNode(userInput));
-                document.querySelector('#os-list').insertBefore(li,
-                    document.querySelector('#os-list').children[document.querySelectorAll('#os-list, li').length - 2]);
+                li.addEventListener('click', function () {
+                    if (hasClass(li, 'selected')) {
+                        li.classList.remove('selected');
+                    } else {
+                        li.classList.add('selected');
+                    }
+                });
+
+                osList.removeChild(textField);
+                osList.appendChild(li);
+                osList.appendChild(textField);
             }
         })
-
-        document.querySelectorAll("ul#os-list li").forEach(li =>
-            li.addEventListener("click", function () {
-                console.log(1);
-                if (hasClass(li, "selected")) {
-                    li.style.backgroundColor = 'white';
-                    li.style.color = 'black';
-                    li.classList.remove("selected");
-                } else {
-                    li.style.backgroundColor = 'black';
-                    li.style.color = 'white';
-                    li.classList.add("selected");
-                }
-            })
-        )
 
         document.querySelector('#remove').addEventListener('click', function () {
             document.querySelectorAll(".selected").forEach(el => el.remove());
