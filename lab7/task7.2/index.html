@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 Task 6</title>
+
+    <style>
+        #buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            text-align: center;
+        }
+
+        .selected {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="buttons">
+        <input type="button" value="Add" id="add">
+        <input type="button" value="Remove" id="remove">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Developer</th>
+                <th>Source model</th>
+                <th>Platforms</th>
+                <th>General availability</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <tr>
+                <td>Windows 95</td>
+                <td>Microsoft</td>
+                <td>Closed</td>
+                <td>IA-32</td>
+                <td>August 24, 1995</td>
+            </tr>
+            <tr>
+                <td>Windows 95</td>
+                <td>Microsoft</td>
+                <td>Closed</td>
+                <td>IA-32</td>
+                <td>August 24, 1995</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id="additonal-os"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js">
+        
+    </script>
+</body>
+
+</html>
