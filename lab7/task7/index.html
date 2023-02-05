@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 7 Task 7</title>
 </head>
+
 <body>
     <div id="buttons">
         <input type="button" value="Add" id="add">
@@ -24,8 +26,45 @@
         <li>iPadOS</li>
         <li>watchOS</li>
         <li>tvOS</li>
-        <li>HarmonyOS</li>
+        <li class="new">HarmonyOS</li>
         <li><input type="text" name="" id="additonal-os"></li>
     </ul>
+
+    <script>
+        function hasClass(element, className) {
+            return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
+        }
+
+        document.getElementById('add').addEventListener('click', function () {
+            let userInput = document.getElementById('additonal-os').value;
+            if (userInput) {
+                let li = document.createElement('li');
+                // li.classList.add("new");
+                li.appendChild(document.createTextNode(userInput));
+                document.querySelector('#os-list').insertBefore(li,
+                    document.querySelector('#os-list').children[document.querySelectorAll('#os-list, li').length - 2]);
+            }
+        })
+
+        document.querySelectorAll("ul#os-list li").forEach(li =>
+            li.addEventListener("click", function () {
+                console.log(1);
+                if (hasClass(li, "selected")) {
+                    li.style.backgroundColor = 'white';
+                    li.style.color = 'black';
+                    li.classList.remove("selected");
+                } else {
+                    li.style.backgroundColor = 'black';
+                    li.style.color = 'white';
+                    li.classList.add("selected");
+                }
+            })
+        )
+
+        document.querySelector('#remove').addEventListener('click', function () {
+            document.querySelectorAll(".selected").forEach(el => el.remove());
+        })
+    </script>
 </body>
+
 </html>

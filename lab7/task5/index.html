@@ -6,15 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 7 Task 5</title>
-    <style>
-        #buttons {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1em;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -39,20 +30,19 @@
         <li>HarmonyOS</li>
         <li><input type="text" name="" id="additonal-os"></li>
     </ul>
-
-
     <script>
         document.getElementById('add').addEventListener('click', function () {
             let userInput = document.getElementById('additonal-os').value;
             if (userInput) {
-                let li = document.getElementById('additonal-os').parentElement;
-                li.removeChild(li.firstChild);
+                let li = document.createElement('li');
                 li.appendChild(document.createTextNode(userInput));
+                document.querySelector('#os-list').insertBefore(
+                    li, document.querySelector('#os-list').children[document.querySelectorAll('#os-list, li').length - 2]);
             }
         })
 
         document.getElementById('remove').addEventListener('click', function () {
-            document.getElementsByTagName('ul')[0].removeChild(document.getElementsByTagName('ul')[0].children[0]);
+            document.querySelector('#os-list').removeChild(document.querySelector('#os-list').children[0]);
         })
     </script>
 </body>
