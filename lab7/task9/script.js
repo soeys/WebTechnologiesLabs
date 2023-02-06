@@ -1,14 +1,27 @@
-let addBtn = document.querySelector('#add');
-let removeBtn = document.querySelector('#remove');
-addBtn.setAttribute("disabled", "true");
-removeBtn.setAttribute("disabled", "true");
+const addBtn = document.querySelector('#add');
+const removeBtn = document.querySelector('#remove')
 
 function hasClass(element, className) {
     return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
 }
 
-document.querySelectorAll('input').forEach(el => el.addEventListener('keyup', function () {
-    addBtn.removeAttribute("disabled");
+document.querySelectorAll('#os-list li').forEach(li => li.addEventListener('dblclick', function () {
+    addBtn.setAttribute('disabled', 'true');
+    removeBtn.setAttribute('disabled', 'true');
+
+    const newTextfield = document.createElement('input');
+    newTextfield.setAttribute('type', 'text');
+    newTextfield.value = li.innerHTML;
+    li.parentNode.replaceChild(newTextfield, li);
+
+    document.querySelector('#save').addEventListener('click', function () {
+        li.innerHTML = newTextfield.value;
+        newTextfield.parentNode.replaceChild(li, newTextfield);
+        newTextfield.remove();
+
+        addBtn.removeAttribute('disabled');
+        removeBtn.removeAttribute('disabled');
+    })
 }))
 
 addBtn.addEventListener('click', function () {

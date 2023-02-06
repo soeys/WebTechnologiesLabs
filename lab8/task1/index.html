@@ -6,15 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 8 Task 1</title>
+    <style>
+        #block{
+            width: 300px;
+            height: 1000px;
+            border: 1px black solid;
+            
+            text-overflow: ellipsis;
+
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <input type="button" value="Створити масив" id="create-array">
+    <div id="block"></div>
 
     <script>
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+        function getRandomArbitrary(min, max) {
+            return (Math.random() * (max - min) + min).toFixed(3);
+        }
+
+        const block = document.querySelector('#block');
         document.querySelector('#create-array').addEventListener('click', function () {
             let arr = [];
-            
+            block.innerHTML = '';
+
+            for (let i = 0; i < getRandomInt(15, 50); i++) {
+                arr.push(getRandomArbitrary(-20, 0));
+                block.innerHTML += arr[i];
+                block.innerHTML += '<br>';
+            }
         })
     </script>
 </body>
