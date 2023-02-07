@@ -1,10 +1,6 @@
 let myArray = [];
 
-const minSize = 15,
-    maxSize = 50;
-
-const block = document.querySelector('#block');
-const copyBlock = document.querySelector('#copy-block');
+const minSize = 15, maxSize = 50;
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -13,25 +9,7 @@ function getRandomInt(min, max) {
 }
 
 function getRandomArbitrary(min, max) {
-    // return (Math.random() * (max - min) + min);
-
     return (Math.ceil(((Math.random() * (max - min) + min)) * 1000) / 1000);
-}
-
-function print() {
-    block.innerHTML = '';
-    myArray.forEach(el => {
-        block.innerHTML += el;
-        block.innerHTML += '<br>';
-    })
-}
-
-function copy_print(block, myArray = []) {
-    block.innerHTML = '';
-    myArray.forEach(el => {
-        block.innerHTML += el;
-        block.innerHTML += '<br>';
-    })
 }
 
 let bubbleSort = (inputArr) => {
@@ -48,13 +26,21 @@ let bubbleSort = (inputArr) => {
     return inputArr;
 };
 
+function print(block, myArray = []) {
+    block.innerHTML = '';
+    myArray.forEach(el => {
+        block.innerHTML += el;
+        block.innerHTML += '<br>';
+    })
+}
+
 document.querySelector('#create-array').addEventListener('click', function () {
     myArray = [];
 
     for (let i = 0; i < getRandomInt(minSize, maxSize); i++) {
         myArray.push(getRandomArbitrary(-20, 0));
     }
-    print();
+    print(document.querySelector('#block'), myArray);
 })
 
 document.querySelector('#add').addEventListener('click', function () {
@@ -64,17 +50,17 @@ document.querySelector('#add').addEventListener('click', function () {
             myArray.splice(userInput, 0, getRandomArbitrary(-20, 0))
         }
     }
-    print();
+    print(document.querySelector('#block'), myArray);
 })
 
 document.querySelector('#remove').addEventListener('click', function () {
     myArray.splice(myArray.length / 2, 1);
-    print();
+    print(document.querySelector('#block'), myArray);
 })
 
 document.querySelector('#replace').addEventListener('click', function () {
     myArray[0] /= 2;
-    print();
+    print(document.querySelector('#block'), myArray);
 })
 
 document.querySelector('#sort').addEventListener('click', function () {
@@ -84,7 +70,7 @@ document.querySelector('#sort').addEventListener('click', function () {
         slicedArray.reverse();
     }
     myArray = myArray.concat(slicedArray);
-    print();
+    print(document.querySelector('#block'), myArray);
 })
 
 document.querySelector('#copy').addEventListener('click', function () {
@@ -94,5 +80,10 @@ document.querySelector('#copy').addEventListener('click', function () {
     secondHalf.reverse();
 
     let copy = secondHalf.concat(firstHalf);
-    copy_print(copyBlock, copy);
+    print(document.querySelector('#copy-block'), copy);
+})
+
+document.querySelector('#filter').addEventListener('click', function () {
+    const filter = myArray.filter(num => num < -15); // зроблено меньш ніж -15 тому що -20 це мінімальне значення)
+    print(document.querySelector('#copy-block'), filter);
 })
