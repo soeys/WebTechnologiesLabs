@@ -91,11 +91,19 @@ document.querySelector('#filter').addEventListener('click', function () {
 
 document.querySelector('#stat').addEventListener('click', function () {
     const stat = myArray.reduce((total, item) => {
-        if(item > 0){
+        if (item > 0) {
             total += item;
         }
         return total;
     }, 0);
-    console.log(stat);
     document.querySelector('#copy-block').innerHTML = stat;
+})
+
+document.querySelector('#mod').addEventListener('click', function () {
+    const mod = myArray.reduce((total, item, array) => {
+        array[item] = 0;
+        return array;
+    }, 0);
+    console.log(mod);
+    print(document.querySelector('#copy-block'), myArray);
 })

@@ -91,11 +91,27 @@ document.querySelector('#filter').addEventListener('click', function () {
 
 document.querySelector('#stat').addEventListener('click', function () {
     const stat = myArray.reduce((total, item) => {
-        if(item > 0){
+        if (item > 0) {
             total += item;
         }
         return total;
     }, 0);
-    console.log(stat);
     document.querySelector('#copy-block').innerHTML = stat;
+})
+
+document.querySelector('#mod').addEventListener('click', function () {
+    // const mod = myArray.reduce((total, item, array) => {
+    //     array[item] = 0;
+    //     return array;
+    // }, 0);
+    // console.log(mod);
+    // print(document.querySelector('#copy-block'), myArray);
+})
+
+document.querySelector('#check').addEventListener('click', function () {
+    const even = (element) => (element * 1000) % 2 === 0;
+
+    document.querySelector('#copy-block').innerHTML =  `Кожний елемент є парним: ${myArray.every(even)}`;
+    document.querySelector('#copy-block').innerHTML += '<br>';
+    document.querySelector('#copy-block').innerHTML += `Хоча б один елемент є парним: ${myArray.some(even)}`;
 })
