@@ -100,10 +100,5 @@ document.querySelector('#stat').addEventListener('click', function () {
 })
 
 document.querySelector('#mod').addEventListener('click', function () {
-    const mod = myArray.reduce((total, item, array) => {
-        array[item] = 0;
-        return array;
-    }, 0);
-    console.log(mod);
-    print(document.querySelector('#copy-block'), myArray);
+    
 })
